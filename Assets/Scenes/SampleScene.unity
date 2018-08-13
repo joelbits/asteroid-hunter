@@ -1945,14 +1945,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
-    - target: {fileID: 45619250887632742, guid: 6615735fba8b64535a2448889c0ef1a2,
-        type: 2}
-      propertyPath: m_CustomSkybox
-      value: 
-      objectReference: {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
->>>>>>> Initial commit
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6615735fba8b64535a2448889c0ef1a2, type: 2}
   m_IsPrefabAsset: 0
