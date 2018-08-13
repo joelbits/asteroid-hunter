@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	[SerializeField] GameObject playerShip;
+	[SerializeField] GameObject laserGameObject;
+
 	[SerializeField] float moveSpeed = 60;
 	[SerializeField] float turnSpeed = 100;
 
-	// [SerializeField] Color playerCrosshairColor = Color.red;
 	[SerializeField] float maxDist = 300f;
 	[SerializeField] float aimStartWidth = 1.0f;
 	[SerializeField] float aimEndWidth = 2.0f;
 	[SerializeField] LineRenderer lr;
 	[SerializeField] float addedOffset = 4.0f;
-	// [SerializeField] GameObject chImg;
-	[SerializeField] GameObject playerShip;
-	[SerializeField] GameObject laserGameObject;
 	private Vector3 laserPos;
-
 	Transform myT;
+
 
 	void Start () 
 	{
 		// DrawCrossHair();
 		// lr.enabled = false;
 	}
+
 
 	void Awake() 
 	{
@@ -38,10 +38,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-<<<<<<< HEAD
-		TurnOffLine();
-=======
->>>>>>> Initial commit
 		DrawCrossHair();
 		Thrust();
 		Turn();
@@ -61,15 +57,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-<<<<<<< HEAD
-	void TurnOffLine()
-	{
-		lr.enabled = false;
-	}
-
-
-=======
->>>>>>> Initial commit
 	void Thrust() 
 	{
 		myT.position += myT.forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");

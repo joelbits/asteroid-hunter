@@ -49,11 +49,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1600705634199812}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Mass: 1
-=======
   m_Mass: 10000
->>>>>>> Initial commit
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -72,16 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0646742792de14697a5a2e49f9b8875f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  startPos: {fileID: 4696346990156424}
-  curPos: {fileID: 4696346990156424}
-  endPos: {fileID: 0}
-  curDist: 0
-  moveSpeed: 5
-=======
   moveSpeed: 5
   crashForce: 100
->>>>>>> Initial commit
   maxDist: 2500
   boltSpeed: 100
 --- !u!120 &120300025158619688

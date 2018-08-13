@@ -8,10 +8,6 @@ public class GameUI : MonoBehaviour {
 	[SerializeField] GameObject mainMenu;
 	[SerializeField] GameObject gameUi;
 
-	// [SerializeField] GameObject playerPrefab;
-	// [SerializeField] GameObject playerStartPos;
-	// public GameObject playerInstance;
-
 
 	void Start() {
 		DelayMainMenuDisplay();

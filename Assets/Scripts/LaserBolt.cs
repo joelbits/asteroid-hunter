@@ -23,11 +23,7 @@ public class LaserBolt : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-<<<<<<< HEAD
-		Debug.Log("OnTriggerEnter: colliding with: " + other.name + " src: " + gameObject.name);
-=======
 		Debug.Log("LASERBOLT: OnTriggerEnter: colliding with: " + other.name + " src: " + gameObject.name);
->>>>>>> Initial commit
 
 		Rigidbody otherRb = other.GetComponent<Rigidbody>();
 

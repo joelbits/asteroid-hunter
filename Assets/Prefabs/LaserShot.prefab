@@ -89,7 +89,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: bc2d5e94879844d4a94743fab7d300be, type: 2}
+  - {fileID: 2100000, guid: 1c548378af2eb4e3d989f387afe7bc80, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,11 +123,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214287782496116}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Mass: 10000
-=======
   m_Mass: 1000
->>>>>>> Initial commit
   m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 0
@@ -143,11 +139,7 @@ MeshCollider:
   m_GameObject: {fileID: 1364570531338192}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-<<<<<<< HEAD
-  m_Enabled: 0
-=======
   m_Enabled: 1
->>>>>>> Initial commit
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -164,11 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c23ac59b4a741359189cc9a688255b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  speed: 750
-=======
-  speed: 200
->>>>>>> Initial commit
+  speed: 2000
 --- !u!136 &136839384619076464
 CapsuleCollider:
   m_ObjectHideFlags: 1

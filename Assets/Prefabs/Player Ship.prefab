@@ -66,8 +66,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1219517593535924
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +83,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
->>>>>>> Initial commit
 --- !u!1 &1275677545773338
 GameObject:
   m_ObjectHideFlags: 1
@@ -178,24 +175,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1370518060117040
-GameObject:
-  m_ObjectHideFlags: 0
-=======
 --- !u!1 &1742221968962922
 GameObject:
   m_ObjectHideFlags: 1
->>>>>>> Initial commit
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4629061528207226}
-=======
   - component: {fileID: 4680730577610146}
->>>>>>> Initial commit
   m_Layer: 0
   m_Name: LaserSpawn
   m_TagString: Untagged
@@ -203,41 +190,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!1 &1653183718346286
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4585769276754214}
-  m_Layer: 0
-  m_Name: Lasers
-  m_TagString: Weapon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1896951386547204
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4516736269923536}
-  - component: {fileID: 120347159319065198}
-  - component: {fileID: 114059142154502414}
-  m_Layer: 0
-  m_Name: Laser
-  m_TagString: Weapon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
-=======
->>>>>>> Initial commit
 --- !u!4 &4081650522242892
 Transform:
   m_ObjectHideFlags: 1
@@ -290,26 +242,11 @@ Transform:
   m_Father: {fileID: 4832571546484812}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!4 &4516736269923536
-=======
 --- !u!4 &4637805679242778
->>>>>>> Initial commit
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1896951386547204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4585769276754214}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4585769276754214
-=======
   m_GameObject: {fileID: 1321620044794680}
   m_LocalRotation: {x: 0, y: 0, z: 0.1953916, w: 0.98072535}
   m_LocalPosition: {x: 0.7397001, y: 2.1716459, z: 0.4388836}
@@ -319,23 +256,10 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5352}
 --- !u!4 &4680730577610146
->>>>>>> Initial commit
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1653183718346286}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: 8.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4516736269923536}
-  m_Father: {fileID: 4629061528207226}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4629061528207226
-=======
   m_GameObject: {fileID: 1742221968962922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 8}
@@ -345,36 +269,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4749811554178268
->>>>>>> Initial commit
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1370518060117040}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.09}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4585769276754214}
-  m_Father: {fileID: 4870388770377766}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4637805679242778
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1321620044794680}
-  m_LocalRotation: {x: 0, y: 0, z: 0.1953916, w: 0.98072535}
-  m_LocalPosition: {x: 0.7397001, y: 2.1716459, z: 0.4388836}
-  m_LocalScale: {x: 0.09963683, y: 0.09963683, z: 0.09963683}
-  m_Children: []
-  m_Father: {fileID: 4832571546484812}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5352}
---- !u!4 &4749811554178268
-=======
   m_GameObject: {fileID: 1190208535131710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -384,20 +282,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4765283370106674
->>>>>>> Initial commit
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1190208535131710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4832571546484812}
-  m_RootOrder: 0
-=======
   m_GameObject: {fileID: 1219517593535924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -406,7 +294,6 @@ Transform:
   - {fileID: 4680730577610146}
   m_Father: {fileID: 4870388770377766}
   m_RootOrder: 1
->>>>>>> Initial commit
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4832571546484812
 Transform:
@@ -438,11 +325,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4832571546484812}
-<<<<<<< HEAD
-  - {fileID: 4629061528207226}
-=======
   - {fileID: 4765283370106674}
->>>>>>> Initial commit
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -601,11 +484,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-<<<<<<< HEAD
-  - {fileID: 2100000, guid: cb6281135d391d243a2361c53acc0816, type: 2}
-=======
   - {fileID: 2100000, guid: 03b5965d67bdd4751b80562acc427d99, type: 2}
->>>>>>> Initial commit
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -802,41 +681,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 54138851418887490}
+  explosionScale: 10
   laserHitModifier: 300
+  blowUp: {fileID: 0}
   shield: {fileID: 114677377925836384}
-  takeDamagePrefab: {fileID: 0}
+  rigidBody: {fileID: 54138851418887490}
+  blowUpPrefab: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
-  explosionScale: 10
-  blowUp: {fileID: 1167717205135322, guid: 3272a8d393cb44b42b52600ab0f89a56, type: 2}
+  explosionPrefab: {fileID: 0}
+  explosionSoundPrefab: {fileID: 0}
+  takeDamagePrefab: {fileID: 0}
   soundTimeOut: 1.05
   animationTimeOut: 1.05
-<<<<<<< HEAD
---- !u!114 &114059142154502414
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1896951386547204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9463c6ca55f3c417880e75194c5767f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserOffTime: 0.6
-  maxDist: 5000
-  fireDelay: 0.1
-  laserSpeed: 500
-  laserSound: {fileID: 1886979812663114, guid: 1f7924fe331894e7bbf427f6afdfb573, type: 2}
-  laserBoltPrefab: {fileID: 1214287782496116, guid: ef0dc93aa0de94647ac493d38dedd8f3,
-    type: 2}
-  laserBoltSpawn: {fileID: 4629061528207226}
-  laserOffset: 1
-  canFire: 1
-=======
->>>>>>> Initial commit
 --- !u!114 &114112127965771570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -848,11 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4bcaab923764479a0042478da514af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  laser: {fileID: 114059142154502414}
-=======
   laser: {fileID: 1219517593535924}
->>>>>>> Initial commit
 --- !u!114 &114115464500039340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -864,15 +718,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 54138851418887490}
+  explosionScale: 10
   laserHitModifier: 300
+  blowUp: {fileID: 0}
   shield: {fileID: 114677377925836384}
-  takeDamagePrefab: {fileID: 0}
+  rigidBody: {fileID: 54138851418887490}
+  blowUpPrefab: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
-  explosionScale: 10
-  blowUp: {fileID: 1167717205135322, guid: 3272a8d393cb44b42b52600ab0f89a56, type: 2}
+  explosionPrefab: {fileID: 0}
+  explosionSoundPrefab: {fileID: 0}
+  takeDamagePrefab: {fileID: 0}
   soundTimeOut: 1.05
   animationTimeOut: 1.05
 --- !u!114 &114284515098491828
@@ -886,15 +743,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 54138851418887490}
+  explosionScale: 10
   laserHitModifier: 300
+  blowUp: {fileID: 0}
   shield: {fileID: 114677377925836384}
-  takeDamagePrefab: {fileID: 0}
+  rigidBody: {fileID: 54138851418887490}
+  blowUpPrefab: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
-  explosionScale: 10
-  blowUp: {fileID: 1167717205135322, guid: 3272a8d393cb44b42b52600ab0f89a56, type: 2}
+  explosionPrefab: {fileID: 0}
+  explosionSoundPrefab: {fileID: 0}
+  takeDamagePrefab: {fileID: 0}
   soundTimeOut: 1.05
   animationTimeOut: 1.05
 --- !u!114 &114492504837173914
@@ -908,21 +768,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a260cd2c74a64e28aad6baceeb99041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  playerShip: {fileID: 1365095557746620}
+  laserGameObject: {fileID: 1219517593535924}
+  moveSpeed: 200
   turnSpeed: 75
   maxDist: 100
   aimStartWidth: 0.1
   aimEndWidth: 0.1
   lr: {fileID: 120127295375909164}
-<<<<<<< HEAD
-  addedOffset: 10
-  playerShip: {fileID: 1365095557746620}
-  laserGameObject: {fileID: 1896951386547204}
-=======
   addedOffset: 8
-  playerShip: {fileID: 1365095557746620}
-  laserGameObject: {fileID: 1219517593535924}
->>>>>>> Initial commit
 --- !u!114 &114578670449632080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -934,15 +788,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 54138851418887490}
+  explosionScale: 10
   laserHitModifier: 300
+  blowUp: {fileID: 0}
   shield: {fileID: 114677377925836384}
-  takeDamagePrefab: {fileID: 0}
+  rigidBody: {fileID: 54138851418887490}
+  blowUpPrefab: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
-  explosionScale: 10
-  blowUp: {fileID: 1167717205135322, guid: 3272a8d393cb44b42b52600ab0f89a56, type: 2}
+  explosionPrefab: {fileID: 0}
+  explosionSoundPrefab: {fileID: 0}
+  takeDamagePrefab: {fileID: 0}
   soundTimeOut: 1.05
   animationTimeOut: 1.05
 --- !u!114 &114669264000108156
@@ -956,15 +813,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 54138851418887490}
+  explosionScale: 10
   laserHitModifier: 300
+  blowUp: {fileID: 0}
   shield: {fileID: 114677377925836384}
-  takeDamagePrefab: {fileID: 0}
+  rigidBody: {fileID: 54138851418887490}
+  blowUpPrefab: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
-  explosionScale: 10
-  blowUp: {fileID: 1167717205135322, guid: 3272a8d393cb44b42b52600ab0f89a56, type: 2}
+  explosionPrefab: {fileID: 0}
+  explosionSoundPrefab: {fileID: 0}
+  takeDamagePrefab: {fileID: 0}
   soundTimeOut: 1.05
   animationTimeOut: 1.05
 --- !u!114 &114677377925836384
@@ -982,8 +842,6 @@ MonoBehaviour:
   curHealth: 0
   regenRate: 5
   regenAmount: 1
-<<<<<<< HEAD
-=======
 --- !u!114 &114706508020415348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -995,17 +853,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9463c6ca55f3c417880e75194c5767f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserOffTime: 0.6
-  maxDist: 5000
+  laserOffTime: 5
+  maxDist: 10000
   fireDelay: 0.2
-  laserSpeed: 700
+  laserSpeed: 2000
   laserSound: {fileID: 1886979812663114, guid: 1f7924fe331894e7bbf427f6afdfb573, type: 2}
   laserBoltPrefab: {fileID: 1214287782496116, guid: ef0dc93aa0de94647ac493d38dedd8f3,
     type: 2}
   laserBoltSpawn: {fileID: 4680730577610146}
   laserOffset: 1
   canFire: 1
->>>>>>> Initial commit
 --- !u!114 &114930991951966640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1017,15 +874,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 54138851418887490}
+  explosionScale: 10
   laserHitModifier: 300
+  blowUp: {fileID: 0}
   shield: {fileID: 114677377925836384}
-  takeDamagePrefab: {fileID: 0}
+  rigidBody: {fileID: 54138851418887490}
+  blowUpPrefab: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
-  explosionScale: 10
-  blowUp: {fileID: 1167717205135322, guid: 3272a8d393cb44b42b52600ab0f89a56, type: 2}
+  explosionPrefab: {fileID: 0}
+  explosionSoundPrefab: {fileID: 0}
+  takeDamagePrefab: {fileID: 0}
   soundTimeOut: 1.05
   animationTimeOut: 1.05
 --- !u!120 &120127295375909164
@@ -1131,22 +991,13 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
-<<<<<<< HEAD
---- !u!120 &120347159319065198
-=======
 --- !u!120 &120862815534220462
->>>>>>> Initial commit
 LineRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1896951386547204}
-  m_Enabled: 1
-=======
   m_GameObject: {fileID: 1219517593535924}
   m_Enabled: 0
->>>>>>> Initial commit
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1155,11 +1006,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-<<<<<<< HEAD
-  - {fileID: 2100000, guid: 9f663aa0d3dc3f44389306ed68c6c668, type: 2}
-=======
-  - {fileID: 2100000, guid: 3eb8cc4a6fb112f418bc9ccff02be21f, type: 2}
->>>>>>> Initial commit
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1181,11 +1028,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  - {x: 0, y: 0, z: 0}
-=======
   - {x: 0, y: 0, z: 1}
->>>>>>> Initial commit
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -1193,24 +1036,6 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-<<<<<<< HEAD
-        time: 0.63091487
-        value: 0.7028979
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.81387025
-        value: 0.5392883
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-=======
         time: 0.4794953
         value: 0.5072464
         inSlope: -0.7657008
@@ -1227,18 +1052,13 @@ LineRenderer:
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.38456583
->>>>>>> Initial commit
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-<<<<<<< HEAD
-      key0: {r: 0.93333334, g: 0.71568626, b: 0.062745094, a: 1}
-=======
       key0: {r: 0.9339623, g: 0.061676733, b: 0.061676733, a: 1}
->>>>>>> Initial commit
       key1: {r: 0.8962264, g: 0.06763973, b: 0.06763973, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
