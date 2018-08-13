@@ -41,12 +41,11 @@ public class Asteroid : MonoBehaviour {
 
 	public void SelfDestruct()
 	{
-		Debug.Log("SelfDestruct in " + destructionDelay);
-
-		float timer = Random.Range(0, destructionDelay);
+		// float timer = Random.Range(0, destructionDelay);
+		// Debug.Log("SelfDestruct in " + destructionDelay);
+		// Invoke("DestroyAsteroid", timer);
 
 		if (gameObject != null)
-			// Invoke("DestroyAsteroid", timer);
 			DestroyAsteroid();
 	}
 

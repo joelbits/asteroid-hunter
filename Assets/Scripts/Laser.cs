@@ -8,7 +8,7 @@ public class Laser : MonoBehaviour {
 [SerializeField] float laserOffTime = .15f;
 [SerializeField] float maxDist = 500f;
 [SerializeField] float fireDelay = 0.2f;
-[SerializeField] float laserSpeed = 700.0f;
+// [SerializeField] float laserSpeed = 700.0f;
 [SerializeField] GameObject laserSound;
 [SerializeField] GameObject laserBoltPrefab;
 [SerializeField] Transform laserBoltSpawn;

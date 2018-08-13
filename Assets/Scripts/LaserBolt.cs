@@ -7,8 +7,8 @@ public class LaserBolt : MonoBehaviour {
 
 	[SerializeField] float moveSpeed = 100.0f;
 	[SerializeField] float crashForce = 100.0f;
-	[SerializeField] float maxDist = 2500.0f;
-	[SerializeField] float boltSpeed = 10.0f;
+	// [SerializeField] float maxDist = 2500.0f;
+	// [SerializeField] float boltSpeed = 10.0f;
 	private LineRenderer lr;
 	private Rigidbody rb;
 

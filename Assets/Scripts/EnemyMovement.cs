@@ -5,10 +5,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
 
 	[SerializeField] Transform target;
-	[SerializeField] float rotationalDamp = 1.0f;
+	// [SerializeField] float rotationalDamp = 1.0f;
 	[SerializeField] float moveSpeed = 25f;
 	public float minDist = 100f;
-	private float nextMoveTime;
 
 	[SerializeField] float rayCastOffset = 2.5f;
 	[SerializeField] float detectionDist = 50f;
@@ -40,7 +39,7 @@ public class EnemyMovement : MonoBehaviour {
 
 
 	void Awake() {
-		nextMoveTime = Time.fixedTime + 5.0f;
+		
 	}
 
 

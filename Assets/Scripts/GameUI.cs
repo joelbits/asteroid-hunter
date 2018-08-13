@@ -48,8 +48,8 @@ public class GameUI : MonoBehaviour {
 
 	void ToogleMainMenu()
 	{
-		mainMenu.SetActive(!mainMenu.active);
-		gameUi.SetActive(!gameUi.active);
+		mainMenu.SetActive(!mainMenu.activeSelf);
+		gameUi.SetActive(!gameUi.activeSelf);
 	}
 
 }

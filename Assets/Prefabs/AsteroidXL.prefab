@@ -148,6 +148,8 @@ MonoBehaviour:
   shield: {fileID: 114916590917849836}
   rigidBody: {fileID: 54589700187321428}
   blowUpPrefab: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 2}
+  blowUpSound: {fileID: 1956286653594812, guid: 1d2a1db47df854ceabc4e6cf2a6c4789,
+    type: 2}
   explosion: {fileID: 100002, guid: ec8ca459c13886c48b2e9767acbe237b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
@@ -155,7 +157,7 @@ MonoBehaviour:
   explosionSoundPrefab: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
   takeDamagePrefab: {fileID: 100002, guid: ec8ca459c13886c48b2e9767acbe237b, type: 2}
-  soundTimeOut: 1.05
+  soundTimeOut: 3
   animationTimeOut: 1.05
 --- !u!114 &114916590917849836
 MonoBehaviour:

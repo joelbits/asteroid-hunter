@@ -8,7 +8,7 @@ public class EnemyAttack : MonoBehaviour {
 	[SerializeField] Transform target;
 	[SerializeField] Laser laser;
 	Vector3 hitPos;
-	[SerializeField] float playerDistanceOffset = 100f;
+
 
 	bool FindTarget()
 	{	

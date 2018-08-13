@@ -77,7 +77,7 @@ public class Shield : MonoBehaviour {
 			if (curHealth < 1)
 			{
 				GetComponent<Explosion>().BlowUp();
-				Debug.Log("Asteroid died: BOOM!");
+				// Debug.Log("Asteroid died: BOOM!");
 				return;
 			}
 		}

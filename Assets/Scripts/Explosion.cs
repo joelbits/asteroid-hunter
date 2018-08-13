@@ -13,6 +13,7 @@ public class Explosion : MonoBehaviour {
 	[SerializeField] Rigidbody rigidBody;
 
 	[SerializeField] GameObject blowUpPrefab;
+	[SerializeField] GameObject blowUpSound;
 	[SerializeField] GameObject explosion;
 	[SerializeField] GameObject explosionSound;
 	[SerializeField] GameObject explosionPrefab;
@@ -104,7 +105,7 @@ public class Explosion : MonoBehaviour {
 		if (blowUpPrefab == null)
 			return;
 
-		Debug.Log("Blowup Prefab should explode for: " + gameObject.name + " with tag: " + gameObject.tag);
+		// Debug.Log("Blowup Prefab should explode for: " + gameObject.name + " with tag: " + gameObject.tag);
 
 		// If attached to Asteroid
 		Asteroid tmpAst = GetComponent<Asteroid>();
@@ -113,8 +114,16 @@ public class Explosion : MonoBehaviour {
 			// EventManager.ScorePoints(5000);
 			if (gameObject != null)
 			{
+				GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation) as GameObject;
+				blowupExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
-				Debug.Log("Asteroid goes BOOM!");
+				if (blowupExplosion != null)
+					Destroy(blowupExplosion, 3.5f);
+				
+				GameObject tmpSound = Instantiate(blowUpSound, transform.position, transform.rotation) as GameObject;
+				if (tmpSound != null)
+					Destroy(tmpSound, soundTimeOut);
+
 				gameObject.GetComponent<Asteroid>().SelfDestruct();
 				// Destroy(gameObject);
 				return;

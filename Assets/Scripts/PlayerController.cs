@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] float aimEndWidth = 2.0f;
 	[SerializeField] LineRenderer lr;
 	[SerializeField] float addedOffset = 4.0f;
-	private Vector3 laserPos;
 	Transform myT;
 
 
@@ -30,7 +29,6 @@ public class PlayerController : MonoBehaviour {
 	{
 		myT = transform;
 		lr = GetComponent<LineRenderer>();
-		laserPos = laserGameObject.transform.position;
 		lr.startWidth = aimStartWidth;
 		lr.endWidth = aimEndWidth;
 	}
