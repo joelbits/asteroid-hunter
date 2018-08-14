@@ -24,7 +24,7 @@ public class ShieldUI : MonoBehaviour {
 	void OnDisable() 
 	{
 		EventManager.onTakeDamage -= UpdateShieldDisplay;
-		EventManager.onStartGame -= ResetShield;
+		// EventManager.onStartGame -= ResetShield;
 	}
 
 
@@ -36,8 +36,7 @@ public class ShieldUI : MonoBehaviour {
 
 	void ResetShield()
 	{
-		Debug.Log("ResetShield!");
-		barRectTransform.sizeDelta = new Vector2(200, 10);
+		barRectTransform.sizeDelta = new Vector2(maxWidth * 1.0f, 10);
 	}
 
 }

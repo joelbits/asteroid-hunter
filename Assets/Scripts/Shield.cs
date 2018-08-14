@@ -37,7 +37,7 @@ public class Shield : MonoBehaviour {
 	}
 
 
-	public void TakeDamage(int dmg = 1)
+	public void TakeDamage(Vector3 hitPoint, int dmg = 1)
 	{
 		curHealth -= dmg;
 		float curHealthPercent = (float)curHealth / (float)maxHealth;
@@ -48,7 +48,7 @@ public class Shield : MonoBehaviour {
 		{
 			// Debug.Log("TakeDamage: " + gameObject.name + " tag: " + gameObject.tag + " " + curHealthPercent + "% HP");
 			EventManager.onMotherTakeDamage(curHealthPercent);
-			GetComponent<Explosion>().ShowTakeDamage();
+			GetComponent<Explosion>().ShowTakeDamage(hitPoint);
 
 			if (curHealth == 1)
 			{
@@ -59,16 +59,16 @@ public class Shield : MonoBehaviour {
 		} 
 		else if (gameObject.CompareTag("Player"))
 		{
-			// Debug.Log("curH: " + curHealth + " max: " + maxHealth + " percent: " + healthPercent);
+			// Debug.Log("TakeDamage: " + gameObject.name + " curH: " + curHealth + " max: " + maxHealth + " percent: " + curHealthPercent);
 			EventManager.TakeDamage(curHealthPercent);
 
-			if (curHealth == 1)
+			if (curHealth < 1)
 			{	
 				GameObject motherShip = GameObject.FindGameObjectWithTag("MotherShip");
 				if (motherShip != null)
 				{
-					EventManager.PlayerDeath();
 					GetComponent<Explosion>().BlowUp();
+					EventManager.PlayerDeath();
 					Debug.Log("Player died: BOOM!");
 				}
 				else
@@ -80,24 +80,21 @@ public class Shield : MonoBehaviour {
 		else if (gameObject.CompareTag("Asteroid"))
 		{
 			// Debug.Log("Asteroid taking damage, current health: " + curHealth);
-			GetComponent<Explosion>().ShowTakeDamage();
+			GetComponent<Explosion>().ShowTakeDamage(hitPoint);
 
 			if (curHealth < 1)
 			{
 				GetComponent<Explosion>().BlowUp();
-				// Debug.Log("Asteroid died: BOOM!");
 				return;
 			}
 		}
 		else if (gameObject.CompareTag("Enemy"))
 		{
-			GetComponent<Explosion>().ShowTakeDamage();
+			GetComponent<Explosion>().ShowTakeDamage(hitPoint);
 
 			if (curHealth < 1)
 			{
-				Debug.Log("Enemy blowup, current health: " + curHealth);
 				GetComponent<Explosion>().BlowUp();
-				// Debug.Log("Asteroid died: BOOM!");
 				return;
 			}
 		}
@@ -108,14 +105,14 @@ public class Shield : MonoBehaviour {
 	}
 
 
-	public void TakeDamageFromPlayer(int dmg = 1)
+	public void TakeDamageFromPlayer(Vector3 hitPoint, int dmg = 1)
 	{
 		curHealth -= dmg;
 		// Debug.Log(gameObject.name + " Taking Dmg From Player: " + dmg + " cur HP: " + curHealth);
 
 		if (curHealth < 1) 
 		{
-			GetComponent<Explosion>().ShowTakeDamage();
+			GetComponent<Explosion>().ShowTakeDamage(hitPoint);
 			// EventManager.ScorePoints(100);
 		}
 	}
