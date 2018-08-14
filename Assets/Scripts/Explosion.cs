@@ -34,7 +34,7 @@ public class Explosion : MonoBehaviour {
 		if (shield != null)
 		{
 			// shield.GetComponent<Shield>().TakeDamage();
-			shield.TakeDamage();
+			shield.TakeDamage(hitPoint);
 			// Debug.Log("Hit Taken to: " + gameObject.name);
 		}
 		else
@@ -44,12 +44,12 @@ public class Explosion : MonoBehaviour {
 	}
 
 
-	public void ShowTakeDamage()
+	public void ShowTakeDamage(Vector3 hitPoint)
 	{	
 		// Debug.Log("TakeDamagePrefeb is to explode. takeDamagePrefab: " + takeDamagePrefab.name + " trPos: " + transform.position + " trRot: " + transform.rotation);
 		if (takeDamagePrefab != null && transform != null)
 		{
-			GameObject takeDamageExplosion = Instantiate(takeDamagePrefab, transform.position, transform.rotation) as GameObject;
+			GameObject takeDamageExplosion = Instantiate(takeDamagePrefab, hitPoint, transform.rotation) as GameObject;
 			takeDamageExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
 			if (takeDamageExplosion != null)
@@ -61,7 +61,7 @@ public class Explosion : MonoBehaviour {
 	public void HitTakenFromPlayer(Vector3 hitPoint)
 	{
 			// Debug.Log("Hit Taken from Player to: " + gameObject.transform.parent.gameObject.name);
-			shield.TakeDamageFromPlayer();
+			shield.TakeDamageFromPlayer(hitPoint);
 	}
 
 
@@ -69,8 +69,16 @@ public class Explosion : MonoBehaviour {
 	{
 		// Debug.Log("Contact: between " + gameObject.name + " and " + collision.transform.name);
 
-		foreach(ContactPoint contact in collision.contacts)
-			HitTaken(contact.point);
+		if (collision.transform.CompareTag("Player"))
+		{
+			collision.transform.gameObject.GetComponentInChildren<Shield>().TakeDamage(collision.contacts[0].point, 1);
+			HitTaken(collision.contacts[0].point);
+			// collision.transform.gameObject.GetComponentInChildren<Explosion>().ShowTakeDamage(collision.contacts[0].point);
+			return;
+		}
+
+		// foreach(ContactPoint contact in collision.contacts)
+		HitTaken(collision.contacts[0].point);
 
 		if (collision.transform.CompareTag("LaserShot"))
 		{
@@ -154,7 +162,7 @@ public class Explosion : MonoBehaviour {
 			if (blowupExplosion != null)
 				Destroy(blowupExplosion, 3.5f);
 
-			Debug.Log("Blowup enemy!");
+			Debug.Log("Blowup Player!");
 			Destroy(gameObject);
 			return;
 		}

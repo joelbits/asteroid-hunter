@@ -24,7 +24,7 @@ public class MotherShipShieldUI : MonoBehaviour {
 	void OnDisable() 
 	{
 		EventManager.onTakeDamage -= UpdateMotherShieldDisplay;
-		EventManager.onStartGame -= ResetShield;
+		// EventManager.onStartGame -= ResetShield;
 	}
 
 
@@ -36,7 +36,7 @@ public class MotherShipShieldUI : MonoBehaviour {
 
 	void ResetShield()
 	{
-		barRectTransform.sizeDelta = new Vector2(maxWidth * 1, 10);
+		barRectTransform.sizeDelta = new Vector2(maxWidth * 1.0f, 10);
 	}
 
 }
