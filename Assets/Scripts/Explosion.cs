@@ -47,7 +47,7 @@ public class Explosion : MonoBehaviour {
 	public void ShowTakeDamage()
 	{	
 		// Debug.Log("TakeDamagePrefeb is to explode. takeDamagePrefab: " + takeDamagePrefab.name + " trPos: " + transform.position + " trRot: " + transform.rotation);
-		if (takeDamagePrefab != null)
+		if (takeDamagePrefab != null && transform != null)
 		{
 			GameObject takeDamageExplosion = Instantiate(takeDamagePrefab, transform.position, transform.rotation) as GameObject;
 			takeDamageExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
@@ -162,6 +162,12 @@ public class Explosion : MonoBehaviour {
 		// If attached to MotherShip
 		if (gameObject.CompareTag("MotherShip"))
 		{
+			GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation) as GameObject;
+			blowupExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
+
+			if (blowupExplosion != null)
+				Destroy(blowupExplosion, 3.5f);
+
 			Destroy(gameObject);
 		}
 

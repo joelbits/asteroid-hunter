@@ -40,20 +40,19 @@ public class Shield : MonoBehaviour {
 	public void TakeDamage(int dmg = 1)
 	{
 		curHealth -= dmg;
+		float curHealthPercent = (float)curHealth / (float)maxHealth;
 
-		Debug.Log("TakeDamage: " + gameObject.name + " tag: " + gameObject.tag);
-
-		float healthPercent = (float) curHealth / (float) maxHealth;
+		// Debug.Log("TakeDamage: " + gameObject.name + " tag: " + gameObject.tag + " Cur HP: " + curHealthPercent);
 
 		if (gameObject.CompareTag("MotherShip"))
 		{
-			EventManager.MotherTakeDamage(healthPercent);
-			if (curHealth < 1)
+			// Debug.Log("TakeDamage: " + gameObject.name + " tag: " + gameObject.tag + " " + curHealthPercent + "% HP");
+			EventManager.onMotherTakeDamage(curHealthPercent);
+			GetComponent<Explosion>().ShowTakeDamage();
+
+			if (curHealth == 1)
 			{
 				EventManager.PlayerDeath();
-
-				// GetComponentInChildren<Explosion>().BlowUp();
-				// explosion.BlowUp();
 				GetComponent<Explosion>().BlowUp();
 				Debug.Log("GAME OVER; MotherShip died === Player died == Blowup!");
 			}
@@ -61,14 +60,21 @@ public class Shield : MonoBehaviour {
 		else if (gameObject.CompareTag("Player"))
 		{
 			// Debug.Log("curH: " + curHealth + " max: " + maxHealth + " percent: " + healthPercent);
-			EventManager.TakeDamage(healthPercent);
+			EventManager.TakeDamage(curHealthPercent);
 
-			if (curHealth < 1)
+			if (curHealth == 1)
 			{	
-				EventManager.PlayerDeath();
-				GetComponent<Explosion>().BlowUp();
-				// GetComponentInChildren<Explosion>().BlowUp();
-				Debug.Log("Player died: BOOM!");
+				GameObject motherShip = GameObject.FindGameObjectWithTag("MotherShip");
+				if (motherShip != null)
+				{
+					EventManager.PlayerDeath();
+					GetComponent<Explosion>().BlowUp();
+					Debug.Log("Player died: BOOM!");
+				}
+				else
+				{
+					GetComponent<Explosion>().BlowUp();
+				}
 			}
 		}
 		else if (gameObject.CompareTag("Asteroid"))

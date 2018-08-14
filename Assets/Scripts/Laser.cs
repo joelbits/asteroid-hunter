@@ -48,20 +48,7 @@ Vector3 CastRay()
 		}
 		else if (hit.transform.tag.Equals("MotherShip"))
 		{
-			Debug.Log("DONT SHOOT MOTHERSHIP DUMMY!");
-
-			GameObject mShip = hit.transform.gameObject;
-			float motherCurHealth = mShip.GetComponent<Shield>().GetCurHealth();
-			float motherMaxHealth = mShip.GetComponent<Shield>().GetMaxHealth();
-			float motherCurHealthPercent = motherCurHealth / motherMaxHealth;
-			EventManager.onMotherTakeDamage(motherCurHealthPercent);
-
-			if (motherCurHealth == 0)
-			{
-				mShip.GetComponent<Explosion>().BlowUp();
-				EventManager.PlayerDeath();
-				// return Vector3.zero;
-			}
+			// Debug.Log("DONT SHOOT MOTHERSHIP DUMMY!");
 		}
 
 		// else if (hit.transform.CompareTag("Asteroid"))
