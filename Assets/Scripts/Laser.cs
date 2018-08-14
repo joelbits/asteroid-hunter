@@ -42,10 +42,9 @@ Vector3 CastRay()
 	{
 		if (hit.transform.tag.Equals("Enemy"))
 		{
-			GameObject enemy = hit.transform.gameObject;
-
-			enemy.GetComponent<Explosion>().BlowUp();
-			EventManager.ScorePoints(1000);
+			// GameObject enemy = hit.transform.gameObject;
+			// enemy.GetComponent<Explosion>().BlowUp();
+			// EventManager.ScorePoints(1000);
 		}
 		else if (hit.transform.tag.Equals("MotherShip"))
 		{

@@ -79,7 +79,7 @@ GameObject:
   m_Layer: 0
   m_Name: LaserGun
   m_TagString: Weapon
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -262,7 +262,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742221968962922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8}
+  m_LocalPosition: {x: 0, y: 0, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4765283370106674}
@@ -687,6 +687,7 @@ MonoBehaviour:
   shield: {fileID: 114677377925836384}
   rigidBody: {fileID: 54138851418887490}
   blowUpPrefab: {fileID: 0}
+  blowUpSound: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
@@ -724,6 +725,7 @@ MonoBehaviour:
   shield: {fileID: 114677377925836384}
   rigidBody: {fileID: 54138851418887490}
   blowUpPrefab: {fileID: 0}
+  blowUpSound: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
@@ -749,6 +751,7 @@ MonoBehaviour:
   shield: {fileID: 114677377925836384}
   rigidBody: {fileID: 54138851418887490}
   blowUpPrefab: {fileID: 0}
+  blowUpSound: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
@@ -775,7 +778,6 @@ MonoBehaviour:
   maxDist: 100
   aimStartWidth: 0.1
   aimEndWidth: 0.1
-  lr: {fileID: 120127295375909164}
   addedOffset: 8
 --- !u!114 &114578670449632080
 MonoBehaviour:
@@ -794,6 +796,7 @@ MonoBehaviour:
   shield: {fileID: 114677377925836384}
   rigidBody: {fileID: 54138851418887490}
   blowUpPrefab: {fileID: 0}
+  blowUpSound: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
@@ -819,6 +822,7 @@ MonoBehaviour:
   shield: {fileID: 114677377925836384}
   rigidBody: {fileID: 54138851418887490}
   blowUpPrefab: {fileID: 0}
+  blowUpSound: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}
@@ -856,7 +860,6 @@ MonoBehaviour:
   laserOffTime: 5
   maxDist: 10000
   fireDelay: 0.2
-  laserSpeed: 2000
   laserSound: {fileID: 1886979812663114, guid: 1f7924fe331894e7bbf427f6afdfb573, type: 2}
   laserBoltPrefab: {fileID: 1214287782496116, guid: ef0dc93aa0de94647ac493d38dedd8f3,
     type: 2}
@@ -880,6 +883,7 @@ MonoBehaviour:
   shield: {fileID: 114677377925836384}
   rigidBody: {fileID: 54138851418887490}
   blowUpPrefab: {fileID: 0}
+  blowUpSound: {fileID: 0}
   explosion: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
   explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
     type: 2}

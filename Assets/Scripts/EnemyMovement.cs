@@ -98,12 +98,14 @@ public class EnemyMovement : MonoBehaviour {
 		float timeToComplete = angle / rotationSpeed;
 		float donePercentage = Mathf.Min(1F, Time.deltaTime / timeToComplete);
 		// donePercentage = 0.5f;
-
+		if (donePercentage == 1)
+			return;
+		
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, donePercentage);
 
 		// GetComponent<Rigidbody>().MoveRotation(transform.rotation);
 		Debug.DrawLine(transform.position, target.transform.position, Color.white);
-		Debug.Log("Trying to rotate: Percentage done: " + donePercentage);
+		// Debug.Log("Trying to rotate: Percentage done: " + donePercentage);
 
 	}
 

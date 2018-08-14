@@ -9,11 +9,6 @@ public class PlayerController : MonoBehaviour {
 
 	[SerializeField] float moveSpeed = 60;
 	[SerializeField] float turnSpeed = 100;
-
-	[SerializeField] float maxDist = 300f;
-	[SerializeField] float aimStartWidth = 1.0f;
-	[SerializeField] float aimEndWidth = 2.0f;
-	[SerializeField] float addedOffset = 4.0f;
 	Transform myT;
 
 

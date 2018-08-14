@@ -41,6 +41,8 @@ public class Shield : MonoBehaviour {
 	{
 		curHealth -= dmg;
 
+		Debug.Log("TakeDamage: " + gameObject.name + " tag: " + gameObject.tag);
+
 		float healthPercent = (float) curHealth / (float) maxHealth;
 
 		if (gameObject.CompareTag("MotherShip"))
@@ -76,6 +78,18 @@ public class Shield : MonoBehaviour {
 
 			if (curHealth < 1)
 			{
+				GetComponent<Explosion>().BlowUp();
+				// Debug.Log("Asteroid died: BOOM!");
+				return;
+			}
+		}
+		else if (gameObject.CompareTag("Enemy"))
+		{
+			GetComponent<Explosion>().ShowTakeDamage();
+
+			if (curHealth < 1)
+			{
+				Debug.Log("Enemy blowup, current health: " + curHealth);
 				GetComponent<Explosion>().BlowUp();
 				// Debug.Log("Asteroid died: BOOM!");
 				return;

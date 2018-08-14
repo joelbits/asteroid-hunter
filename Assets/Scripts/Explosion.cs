@@ -39,17 +39,16 @@ public class Explosion : MonoBehaviour {
 		}
 		else
 		{
-			// Debug.Log("No shield (Could be enemy or other explosion)");
+			Debug.Log("No shield to apply HitTaken to.");
 		}
 	}
 
 
 	public void ShowTakeDamage()
 	{	
+		// Debug.Log("TakeDamagePrefeb is to explode. takeDamagePrefab: " + takeDamagePrefab.name + " trPos: " + transform.position + " trRot: " + transform.rotation);
 		if (takeDamagePrefab != null)
 		{
-			// Debug.Log("TakeDamagePrefeb is to explode. takeDamagePrefab: " + takeDamagePrefab.name + " trPos: " + transform.position + " trRot: " + transform.rotation);
-
 			GameObject takeDamageExplosion = Instantiate(takeDamagePrefab, transform.position, transform.rotation) as GameObject;
 			takeDamageExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
@@ -131,6 +130,21 @@ public class Explosion : MonoBehaviour {
 			return;
 		}
 
+
+		// If attached to Player 
+		if (gameObject.CompareTag("Enemy"))
+		{
+			GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation) as GameObject;
+			blowupExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
+
+			if (blowupExplosion != null)
+				Destroy(blowupExplosion, 3.5f);
+
+			Destroy(gameObject);
+			return;
+		}
+
+
 		// If attached to Player 
 		if (gameObject.CompareTag("Player"))
 		{
@@ -140,6 +154,7 @@ public class Explosion : MonoBehaviour {
 			if (blowupExplosion != null)
 				Destroy(blowupExplosion, 3.5f);
 
+			Debug.Log("Blowup enemy!");
 			Destroy(gameObject);
 			return;
 		}

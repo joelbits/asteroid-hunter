@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4869839359758158}
-  - component: {fileID: 136635858038416608}
   - component: {fileID: 114197367865281558}
   - component: {fileID: 114440875342153618}
   - component: {fileID: 114165771957320436}
   - component: {fileID: 54340848194199208}
+  - component: {fileID: 114971310598517402}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Enemy
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 64478135988603726}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 1256165059234146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 300, y: 300, z: 300}
+  m_LocalScale: {x: 500, y: 500, z: 500}
   m_Children:
   - {fileID: 4213457838440292}
   m_Father: {fileID: 0}
@@ -220,20 +220,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   laser: {fileID: 114626638485475918}
-  playerDistanceOffset: 100
 --- !u!114 &114197367865281558
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256165059234146}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bc807355643e44fe9817c63ff83d75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  rotationalDamp: 0.25
   moveSpeed: 30
   minDist: 100
   rayCastOffset: 400
@@ -250,16 +248,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13abe543207ba4052a6642a2c97137d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shield: {fileID: 0}
-  rigidBody: {fileID: 0}
-  blowUpPrefab: {fileID: 0}
-  takeDamagePrefab: {fileID: 100000, guid: ce4491e862939974997f1e487c3ea84b, type: 2}
-  explosionPrefab: {fileID: 0}
-  explosionSoundPrefab: {fileID: 0}
-  soundTimeOut: 1.05
-  animationTimeOut: 1.05
-  laserHitModifier: 300
   explosionScale: 100
+  laserHitModifier: 300
+  blowUp: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 2}
+  shield: {fileID: 114971310598517402}
+  rigidBody: {fileID: 54340848194199208}
+  blowUpPrefab: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 2}
+  blowUpSound: {fileID: 1956286653594812, guid: 1d2a1db47df854ceabc4e6cf2a6c4789,
+    type: 2}
+  explosion: {fileID: 100002, guid: ec8ca459c13886c48b2e9767acbe237b, type: 2}
+  explosionSound: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
+    type: 2}
+  explosionPrefab: {fileID: 100002, guid: ec8ca459c13886c48b2e9767acbe237b, type: 2}
+  explosionSoundPrefab: {fileID: 1504016777227776, guid: e31923a6b38c54d99b74a73529980e76,
+    type: 2}
+  takeDamagePrefab: {fileID: 100002, guid: ec8ca459c13886c48b2e9767acbe237b, type: 2}
+  soundTimeOut: 3
+  animationTimeOut: 1.05
 --- !u!114 &114626638485475918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,13 +279,27 @@ MonoBehaviour:
   laserOffTime: 0.15
   maxDist: 150
   fireDelay: 2
-  laserSpeed: 10
   laserSound: {fileID: 1886979812663114, guid: 1f7924fe331894e7bbf427f6afdfb573, type: 2}
   laserBoltPrefab: {fileID: 1214287782496116, guid: ef0dc93aa0de94647ac493d38dedd8f3,
     type: 2}
   laserBoltSpawn: {fileID: 4112144944011892}
   laserOffset: 10
   canFire: 1
+--- !u!114 &114971310598517402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256165059234146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e505ded51f2b4d57a04e1766455f621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  curHealth: 0
+  regenRate: 5
+  regenAmount: 1
 --- !u!120 &120068096650383550
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -373,16 +392,3 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!136 &136635858038416608
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256165059234146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 0.3
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
