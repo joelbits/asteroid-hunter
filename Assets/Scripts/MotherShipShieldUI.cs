@@ -36,7 +36,7 @@ public class MotherShipShieldUI : MonoBehaviour {
 
 	void ResetShield()
 	{
-		barRectTransform.sizeDelta = new Vector2(200, 10);
+		barRectTransform.sizeDelta = new Vector2(maxWidth * 1, 10);
 	}
 
 }
