@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () 
 	{
-		// DrawCrossHair();
 	}
 
 
@@ -29,19 +28,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-	// Update is called once per frame
 	void Update() {
-		DrawCrossHair();
 		Thrust();
 		Turn();
-	}
-
-
-	void DrawCrossHair()
-	{
-		Vector3 srcPos = transform.position + (transform.forward * addedOffset);
-		Vector3 aimPos = transform.position + (transform.forward * maxDist);
-		
 	}
 
 
