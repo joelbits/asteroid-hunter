@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] float maxDist = 300f;
 	[SerializeField] float aimStartWidth = 1.0f;
 	[SerializeField] float aimEndWidth = 2.0f;
-	[SerializeField] LineRenderer lr;
 	[SerializeField] float addedOffset = 4.0f;
 	Transform myT;
 
@@ -21,16 +20,12 @@ public class PlayerController : MonoBehaviour {
 	void Start () 
 	{
 		// DrawCrossHair();
-		// lr.enabled = false;
 	}
 
 
 	void Awake() 
 	{
 		myT = transform;
-		lr = GetComponent<LineRenderer>();
-		lr.startWidth = aimStartWidth;
-		lr.endWidth = aimEndWidth;
 	}
 
 
@@ -46,19 +41,13 @@ public class PlayerController : MonoBehaviour {
 	{
 		Vector3 srcPos = transform.position + (transform.forward * addedOffset);
 		Vector3 aimPos = transform.position + (transform.forward * maxDist);
-
-		lr.SetPosition(0, srcPos);
-		lr.SetPosition(1, aimPos);
-		lr.enabled = true;
 		
-		// Invoke("TurnOffLine", 5.0f);
 	}
 
 
 	void Thrust() 
 	{
 		myT.position += myT.forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
-		// Debug.Log("myT.pos = " + myT.position);
 	}
 
 
