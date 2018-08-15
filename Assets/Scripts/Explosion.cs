@@ -49,7 +49,7 @@ public class Explosion : MonoBehaviour {
 		// Debug.Log("TakeDamagePrefeb is to explode. takeDamagePrefab: " + takeDamagePrefab.name + " trPos: " + transform.position + " trRot: " + transform.rotation);
 		if (takeDamagePrefab != null && transform != null)
 		{
-			GameObject takeDamageExplosion = Instantiate(takeDamagePrefab, hitPoint, transform.rotation) as GameObject;
+			GameObject takeDamageExplosion = Instantiate(takeDamagePrefab, hitPoint, transform.rotation, transform) as GameObject;
 			takeDamageExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
 			if (takeDamageExplosion != null)
@@ -121,7 +121,7 @@ public class Explosion : MonoBehaviour {
 			// EventManager.ScorePoints(5000);
 			if (gameObject != null)
 			{
-				GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation) as GameObject;
+				GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation, transform) as GameObject;
 				blowupExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
 				if (blowupExplosion != null)
@@ -142,7 +142,7 @@ public class Explosion : MonoBehaviour {
 		// If attached to Player 
 		if (gameObject.CompareTag("Enemy"))
 		{
-			GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation) as GameObject;
+			GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation, transform) as GameObject;
 			blowupExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
 			if (blowupExplosion != null)
@@ -156,7 +156,7 @@ public class Explosion : MonoBehaviour {
 		// If attached to Player 
 		if (gameObject.CompareTag("Player"))
 		{
-			GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation) as GameObject;
+			GameObject blowupExplosion = Instantiate(blowUpPrefab, transform.position, transform.rotation, transform) as GameObject;
 			blowupExplosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
 
 			if (blowupExplosion != null)

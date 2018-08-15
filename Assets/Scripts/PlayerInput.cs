@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour {
 
 	[SerializeField] GameObject laser;
+	[SerializeField] GameObject playerBody;
+
 
 	void Update () {
 
