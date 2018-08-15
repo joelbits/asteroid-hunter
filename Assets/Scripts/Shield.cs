@@ -61,6 +61,7 @@ public class Shield : MonoBehaviour {
 		{
 			// Debug.Log("TakeDamage: " + gameObject.name + " curH: " + curHealth + " max: " + maxHealth + " percent: " + curHealthPercent);
 			EventManager.TakeDamage(curHealthPercent);
+			GetComponent<Explosion>().ShowTakeDamage(transform.position);
 
 			if (curHealth < 1)
 			{	

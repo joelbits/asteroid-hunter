@@ -709,6 +709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1219517593535924}
+  playerBody: {fileID: 1365095557746620}
 --- !u!114 &114115464500039340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -802,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerShip: {fileID: 1365095557746620}
   laserGameObject: {fileID: 1219517593535924}
-  moveSpeed: 200
+  moveSpeed: 350
   turnSpeed: 75
 --- !u!114 &114578670449632080
 MonoBehaviour:
