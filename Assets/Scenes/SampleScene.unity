@@ -1030,7 +1030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &812756885
 Transform:
   m_ObjectHideFlags: 0
@@ -1073,11 +1073,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1256165059234146, guid: 20d1d897ab6c94738a4df2ace5586d6e,
     type: 2}
-  spawnTimer: 1
-  maxEnemiesCount: 5
+  spawnTimer: 0.05
+  maxEnemiesCount: 500
   curEnemiesCount: 0
   enemy: []
   spawnPoints: []
+  spawnOffset: 500
 --- !u!4 &915650517
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,7 +1781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1806971114
 Transform:
   m_ObjectHideFlags: 0
@@ -2112,8 +2113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 1656369354685646, guid: 81ac3d1b89dd64c718918124183726fb,
     type: 2}
-  maxAsteroidsOnAxis: 4
-  gridSpacing: 1000
+  maxAsteroidsOnAxis: 8
+  gridSpacing: 1250
   asteroid: []
 --- !u!4 &2090558945
 Transform:

@@ -10,6 +10,9 @@ public class EnemySpawner : MonoBehaviour {
 	[SerializeField] int curEnemiesCount = 0;
 	[SerializeField] List<GameObject> enemy;
 	[SerializeField] GameObject[] spawnPoints;
+	[SerializeField] float spawnOffset = 300.0f;
+	private float lastSpawnOffset = 250.0f;
+	private float lastSpawnOffsetV = 250.0f;
 
 
 	void Start() {
@@ -35,7 +38,6 @@ public class EnemySpawner : MonoBehaviour {
 	void CountCurrentEnemies()
 	{
 		curEnemiesCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-		// Debug.Log("Counting enemies: " + curEnemiesCount);
 	}
 
 
@@ -55,11 +57,29 @@ public class EnemySpawner : MonoBehaviour {
 			return;
 			
 		Transform spawnPoint;
-		spawnPoint = GetRandomSpawnPoint();
+		spawnPoint = GetRandomSpawnPoint(); // From all global spawnpoints
 
-		GameObject enemyInstance = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+		float randOffsetH = Random.Range(0f, 3000f);
+		float randOffsetV = Random.Range(0f, 3000f);
+		float randOffsetZ = Random.Range(0f, 3000f);
+
+		Vector3 finalPos = spawnPoint.position + 
+			(spawnPoint.forward * randOffsetZ) + 
+			(spawnPoint.right * randOffsetH) + 
+			(spawnPoint.up * randOffsetV);
+
+		//TODO: Fix random rotation for Enemy instances' 
+		Quaternion randomRotation = Quaternion.Euler( Random.Range(0, 360), 
+														Random.Range(0, 360), 
+														Random.Range(0, 360) );
+
+		GameObject enemyInstance = Instantiate(enemyPrefab, finalPos, spawnPoint.rotation * randomRotation);
+		// enemyInstance.transform.Rotate(new Vector3(Random.Range(0, 360), 0, 0), Space.World);
+
+		enemyInstance.transform.rotation = enemyInstance.transform.rotation * randomRotation;
+
 		enemy.Add(enemyInstance);
-		// Debug.Log("Created and added enemy to list, cur length: " + enemy.Count);
+
 		CountCurrentEnemies();
 	}
 
@@ -67,6 +87,8 @@ public class EnemySpawner : MonoBehaviour {
 	Transform GetRandomSpawnPoint()
 	{
 		GameObject[] spawnerObjects = GameObject.FindGameObjectsWithTag("EnemySpawnPoint");
+
+		// TODO: Check if objects are active to only spawn from active points
 
 		int randomPoint = Random.Range(0, spawnerObjects.Length);
 
