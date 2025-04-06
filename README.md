@@ -3,6 +3,7 @@
 
 #### 3D space shooter game made in Unity3D with C#.
 More info below.
+[The code](./Assets/Scripts)
 
 ### Features
 - 3d game world
@@ -16,3 +17,4 @@ More info below.
 - ...
 
 ### Technical Details
+
